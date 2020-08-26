@@ -33,7 +33,7 @@ namespace GrafApp
             Graphics grph = Graphics.FromImage(bmp);
             grph.DrawRectangle(dots[2].Pn, dots[2].X, dots[2].Y, 10, 10);
             grph.DrawRectangle(dots[20].Pn, dots[20].X, dots[20].Y, 10, 10);
-            for (int i = 0; i < 100; i++)
+            //for (int i = 0; i < 100; i++)
             foreach(Dot d in dots)
             {
                 grph.DrawRectangle(d.Pn,d.X,d.Y,10,10);
