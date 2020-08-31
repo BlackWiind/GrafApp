@@ -1,6 +1,6 @@
 ﻿namespace GrafApp
 {
-    partial class Form1
+    partial class Lab1
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -40,14 +40,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Lab1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 424);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.KeyPreview = true;
+            this.Name = "Lab1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lab1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
