@@ -32,8 +32,6 @@ namespace GrafApp
         {
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             Graphics grph = Graphics.FromImage(bmp);
-            Pen pen = new Pen(Color.Black);
-            grph.DrawRectangle(pen, 0, 0, 659, 422);
             foreach(tPoint d in dots)
             {
                 grph.DrawRectangle(d.Pn,d.X,d.Y,1,1);
@@ -41,9 +39,54 @@ namespace GrafApp
             pictureBox1.Image = bmp;
         }
 
-        private void Lab1_KeyDown(object sender, KeyEventArgs e)
+       /* private void Lab1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyValue == (char)Keys.Right)
+            {
+                foreach (tPoint d in dots)
+                {
+                    d.KeyRight();
+                }
+                Draw();
+            }
+
+            if (e.KeyValue == (char)Keys.Left)
+            {
+                foreach (tPoint d in dots)
+                {
+                    d.KeyLeft();
+                }
+                Draw();
+            }
+
+            if (e.KeyValue == (char)Keys.Up)
+            {
+                foreach (tPoint d in dots)
+                {
+                    d.KeyUp();
+                }
+                Draw();
+            }
+
+            if (e.KeyValue == (char)Keys.Down)
+            {
+                foreach (tPoint d in dots)
+                {
+                    d.KeyDown();
+                }
+                Draw();
+            }
+        }*/
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Init();
+            Draw();
+        }
+
+        private void pictureBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Right)
             {
                 foreach (tPoint d in dots)
                 {

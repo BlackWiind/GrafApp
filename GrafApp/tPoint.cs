@@ -10,7 +10,7 @@ namespace GrafApp
     class tPoint
     {
         private int x , y;
-        private static int maxX = 660, maxY = 424;
+        private static int maxX = 466, maxY = 376;
         static Random rnd = new Random();
         Pen pn;
         public tPoint()
@@ -43,28 +43,28 @@ namespace GrafApp
 
         public void KeyRight()
         {
-            x += 100;
+            x += 30;
             if (x > maxX)
             { x = 0 + (x - maxX); }
         }
 
         public void KeyLeft()
         {
-            x -= 100;
+            x -= 30;
             if (x < 0)
             { x = maxX + x; }
         }
 
         public void KeyDown()
         {
-            y += 100;
+            y += 30;
             if (y > maxY)
             { y = 0 + (y - maxY); }
         }
 
         public void KeyUp()
         {
-            y -= 100;
+            y -= 30;
             if (y < 0)
             { y = maxY + y; }
         }
