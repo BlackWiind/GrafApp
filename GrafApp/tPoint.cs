@@ -57,16 +57,16 @@ namespace GrafApp
 
         public void KeyDown()
         {
-            y += 100;
-            if (y > maxY)
-            { y = 0 + (y - maxY); }
+            y -= 100;
+            if (y < 0)
+            { y = maxY + y; }
         }
 
         public void KeyUp()
         {
-            y -= 100;
-            if (y < 0)
-            { y = maxY + y; }
+            y += 100;
+            if (y > maxX)
+            { y = 0 + (y - maxY); }
         }
     }
 }
