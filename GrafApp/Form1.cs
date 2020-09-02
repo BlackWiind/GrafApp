@@ -84,7 +84,7 @@ namespace GrafApp
             Draw();
         }
 
-        private void pictureBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void Lab1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Right)
             {

@@ -63,7 +63,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(466, 376);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pictureBox1_PreviewKeyDown);
+            //this.pictureBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pictureBox1_PreviewKeyDown);
             // 
             // flowLayoutPanel1
             // 
@@ -81,6 +81,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -94,7 +95,7 @@
             this.KeyPreview = true;
             this.Name = "Lab1";
             this.Text = "Form1";
-            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lab1_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lab1_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
