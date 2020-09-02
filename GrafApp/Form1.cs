@@ -39,86 +39,37 @@ namespace GrafApp
             pictureBox1.Image = bmp;
         }
 
-       /* private void Lab1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyValue == (char)Keys.Right)
-            {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyRight();
-                }
-                Draw();
-            }
-
-            if (e.KeyValue == (char)Keys.Left)
-            {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyLeft();
-                }
-                Draw();
-            }
-
-            if (e.KeyValue == (char)Keys.Up)
-            {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyUp();
-                }
-                Draw();
-            }
-
-            if (e.KeyValue == (char)Keys.Down)
-            {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyDown();
-                }
-                Draw();
-            }
-        }*/
-
         private void button1_Click(object sender, EventArgs e)
         {
             Init();
             Draw();
+            pictureBox1.Focus();
+            
         }
 
         private void Lab1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Right)
             {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyRight();
-                }
+                foreach (tPoint d in dots) { d.KeyRight(); }
                 Draw();
             }
 
             if (e.KeyValue == (char)Keys.Left)
             {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyLeft();
-                }
+                foreach (tPoint d in dots) { d.KeyLeft(); }
                 Draw();
             }
 
             if (e.KeyValue == (char)Keys.Up)
             {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyUp();
-                }
+                foreach (tPoint d in dots) { d.KeyUp(); }
                 Draw();
             }
 
             if (e.KeyValue == (char)Keys.Down)
             {
-                foreach (tPoint d in dots)
-                {
-                    d.KeyDown();
-                }
+                foreach (tPoint d in dots) { d.KeyDown(); }
                 Draw();
             }
         }
