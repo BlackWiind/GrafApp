@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace GrafApp
 {
+
     public partial class Lab1 : Form
     {
         tPoint[] dots = new tPoint[100];
@@ -20,6 +21,13 @@ namespace GrafApp
             Draw();
         }
 
+        public delegate PictureBox Dpicture();
+        public PictureBox ThePicture
+        {
+            get { return this.pictureBox1; }
+        }
+
+
         private void Init()
         {
             for (int i = 0; i < dots.Length; i++)
@@ -27,6 +35,7 @@ namespace GrafApp
                 dots[i] = new tPoint();
             }
         }
+
      
         private void Draw()
         {

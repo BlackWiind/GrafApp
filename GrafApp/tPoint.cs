@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace GrafApp
 {
     class tPoint
     {
-        private int x , y;
-        private static int maxX = 466, maxY = 376;
-        static Random rnd = new Random();
-        Pen pn;
+        protected int x , y;
+        protected static int maxX = 774, maxY = 493;
+        protected static Random rnd = new Random();
+        protected Pen pn;
         public tPoint()
         {
             x = rnd.Next(maxX);
