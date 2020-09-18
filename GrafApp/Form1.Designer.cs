@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -57,34 +57,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(774, 53);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(390, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 41);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Отрезок";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(261, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Эллипс";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(132, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Окружность";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.AutoSize = true;
@@ -97,8 +69,65 @@
             this.button1.TabIndex = 0;
             this.button1.TabStop = false;
             this.button1.Text = "Точки";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(132, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 41);
+            this.button2.TabIndex = 1;
+            this.button2.TabStop = false;
+            this.button2.Text = "Окружность";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(261, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 41);
+            this.button3.TabIndex = 2;
+            this.button3.TabStop = false;
+            this.button3.Text = "Эллипс";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(390, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 41);
+            this.button4.TabIndex = 2;
+            this.button4.TabStop = false;
+            this.button4.Text = "Отрезок";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(519, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 41);
+            this.button5.TabIndex = 3;
+            this.button5.TabStop = false;
+            this.button5.Text = "Треугольник";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(648, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 41);
+            this.button6.TabIndex = 4;
+            this.button6.TabStop = false;
+            this.button6.Text = "Прямоугольник";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -127,24 +156,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.40189F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(780, 558);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(519, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 41);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Треугольник";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(648, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 41);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Прямоугольник";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // Lab1
             // 

@@ -26,6 +26,11 @@ namespace GrafApp
             this.y = y;
             this.pn = new Pen(Color.FromArgb(pen, pen, pen));
         }
+
+        public void PointDraw(Graphics g)
+        {
+            g.DrawRectangle(Pn, x, y, 1, 1);
+        }
         
         public int X
         {
