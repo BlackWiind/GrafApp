@@ -27,7 +27,7 @@ namespace GrafApp
             this.pn = new Pen(Color.FromArgb(pen, pen, pen));
         }
 
-        public void PointDraw(Graphics g)
+        public virtual void SomeDraw(Graphics g)
         {
             g.DrawRectangle(Pn, x, y, 1, 1);
         }

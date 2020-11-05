@@ -14,7 +14,7 @@ namespace GrafApp
     public partial class Lab1 : Form
     {
 
-        tPoint[] dots = new tPoint[100];
+        List<tPoint> list = new List<tPoint>();
         
         public Lab1()
         {
@@ -25,21 +25,22 @@ namespace GrafApp
 
         private void Init()
         {
-            for (int i = 0; i < dots.Length; i++)
+            list.Clear();
+            for (int i = 0; i < 100; i++)
             {
-                dots[i] = new tPoint();
+                list.Add(new tPoint());
             }
-            Draw(dots[0]);
+            Draw();
             pictureBox1.Focus();
         }
      
-        private void Draw(Object obj)
+        private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             Graphics g = Graphics.FromImage(bmp);
-            if (obj is tPoint)
+            foreach(var tPoint in list)
             {
-                foreach (tPoint d in dots) { d.PointDraw(g); }                
+                tPoint.SomeDraw(g);
             }
             pictureBox1.Image = bmp;
         }
@@ -53,22 +54,22 @@ namespace GrafApp
         {
             if (e.KeyValue == (char)Keys.Right)
             {
-                foreach (tPoint d in dots) { d.KeyRight(); Draw(d); }
+                foreach (tPoint d in list) { d.KeyRight(); Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Left)
             {
-                foreach (tPoint d in dots) { d.KeyLeft(); Draw(d); }
+                foreach (tPoint d in list) { d.KeyLeft(); Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Up)
             {
-                foreach (tPoint d in dots) { d.KeyUp(); Draw(d); }
+                foreach (tPoint d in list) { d.KeyUp(); Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Down)
             {
-                foreach (tPoint d in dots) { d.KeyDown(); Draw(d); }
+                foreach (tPoint d in list) { d.KeyDown(); Draw(); }
             }
         }
 
@@ -82,17 +83,20 @@ namespace GrafApp
             pictureBox1.Focus();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            list.Clear();
+            list.Add(new Line());
+            Draw();
+            pictureBox1.Focus();
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             pictureBox1.Focus();
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Focus();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
         {
             pictureBox1.Focus();
         }
