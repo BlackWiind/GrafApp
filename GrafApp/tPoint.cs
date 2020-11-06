@@ -10,7 +10,7 @@ namespace GrafApp
 {
     class tPoint
     {
-        protected int x , y;
+        protected int x , y, width, hieght;
         protected static int maxX = 774, maxY = 493;
         protected static Random rnd = new Random();
         protected Pen pn;
@@ -18,6 +18,8 @@ namespace GrafApp
         {
             x = rnd.Next(maxX);
             y = rnd.Next(maxY);
+            width = 1;
+            hieght = 1;
             pn = new Pen(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
         }
         public tPoint(int x,int y,int pen)
@@ -29,7 +31,7 @@ namespace GrafApp
 
         public virtual void SomeDraw(Graphics g)
         {
-            g.DrawRectangle(Pn, x, y, 1, 1);
+            g.DrawRectangle(Pn, x, y, width, hieght);
         }
         
         public int X

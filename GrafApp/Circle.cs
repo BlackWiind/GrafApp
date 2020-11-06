@@ -7,22 +7,20 @@ using System.Drawing;
 
 namespace GrafApp
 {
-    class Line : tPoint
+    class Circle : tPoint
     {
-        protected int x1, y1;
-
-        public Line()
+        public Circle()
         {
             x = rnd.Next(maxX);
             y = rnd.Next(maxY);
-            x1 = rnd.Next(maxX);
-            y1 = rnd.Next(maxY);
+            width = rnd.Next(maxX/3);
+            hieght = width;
             pn = new Pen(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
         }
 
         public override void SomeDraw(Graphics g)
         {
-            g.DrawLine(pn, x, y, x1, y1);
+            g.DrawEllipse(pn, x, y, width, hieght);
         }
     }
 }

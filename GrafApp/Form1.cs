@@ -75,11 +75,17 @@ namespace GrafApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-          pictureBox1.Focus();
+            list.Clear();
+            list.Add(new Circle());
+            Draw();
+            pictureBox1.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            list.Clear();
+            list.Add(new Ellipse());
+            Draw();
             pictureBox1.Focus();
         }
 
@@ -93,11 +99,17 @@ namespace GrafApp
 
         private void button5_Click(object sender, EventArgs e)
         {
+            list.Clear();
+            list.Add(new Triangle());
+            Draw();
             pictureBox1.Focus();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            list.Clear();
+            list.Add(new Rectangle());
+            Draw();
             pictureBox1.Focus();
         }
     }
