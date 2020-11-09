@@ -24,5 +24,33 @@ namespace GrafApp
         {
             g.DrawLine(pn, x, y, x1, y1);
         }
+
+        public static void KeyRight(Line var)
+        {
+            var.x += 30;
+            if (var.x > maxX)
+            { var.x = 0 + (var.x - maxX); }
+        }
+
+        public static void KeyLeft(Line var)
+        {
+            var.x -= 30;
+            if (var.x < 0)
+            { var.x = maxX + var.x; }
+        }
+
+        public static void KeyDown(Line var)
+        {
+            var.y += 30;
+            if (var.y > maxY)
+            { var.y = 0 + (var.y - maxY); }
+        }
+
+        public static void KeyUp(Line var)
+        {
+            var.y -= 30;
+            if (var.y < 0)
+            { var.y = maxY + var.y; }
+        }
     }
 }

@@ -49,32 +49,32 @@ namespace GrafApp
             get { return pn; }
         }
 
-        public void KeyRight()
+        public static void KeyRight(tPoint var)
         {
-            x += 30;
-            if (x > maxX)
-            { x = 0 + (x - maxX); }
+            var.x += 30;
+            if (var.x > maxX)
+            { var.x = 0 + (var.x - maxX); }
         }
 
-        public void KeyLeft()
+        public static void KeyLeft(tPoint var)
         {
-            x -= 30;
-            if (x < 0)
-            { x = maxX + x; }
+            var.x -= 30;
+            if (var.x < 0)
+            {var. x = maxX + var.x; }
         }
 
-        public void KeyDown()
+        public static void KeyDown(tPoint var)
         {
-            y += 30;
-            if (y > maxY)
-            { y = 0 + (y - maxY); }
+            var.y += 30;
+            if (var.y > maxY)
+            { var.y = 0 + (var.y - maxY); }
         }
 
-        public void KeyUp()
+        public static void KeyUp(tPoint var)
         {
-            y -= 30;
-            if (y < 0)
-            { y = maxY + y; }
+            var.y -= 30;
+            if (var.y < 0)
+            { var.y = maxY + var.y; }
         }
     }
 }

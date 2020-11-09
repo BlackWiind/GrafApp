@@ -54,22 +54,43 @@ namespace GrafApp
         {
             if (e.KeyValue == (char)Keys.Right)
             {
-                foreach (tPoint d in list) { d.KeyRight(); Draw(); }
+                foreach (tPoint d in list) 
+                { if (d is Ellipse) 
+                    { 
+                        Ellipse.KeyRight(d); 
+                    }
+                  else if (d is Circle)
+                    {
+                        Circle.KeyRight(d);
+                    }
+                  else if (d is Triangle)
+                    {
+                        Triangle.KeyRight(d);
+                    }
+                  else if (d is Rectangle)
+                    {
+                        Rectangle.KeyRight(d);
+                    }
+                    else
+                    {
+                        Line.KeyRight(d);
+                    }
+                    Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Left)
             {
-                foreach (tPoint d in list) { d.KeyLeft(); Draw(); }
+                foreach (tPoint d in list) { tPoint.KeyLeft(d); Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Up)
             {
-                foreach (tPoint d in list) { d.KeyUp(); Draw(); }
+                foreach (tPoint d in list) { tPoint.KeyUp(d); Draw(); }
             }
 
             if (e.KeyValue == (char)Keys.Down)
             {
-                foreach (tPoint d in list) { d.KeyDown(); Draw(); }
+                foreach (tPoint d in list) { tPoint.KeyDown(d); Draw(); }
             }
         }
 

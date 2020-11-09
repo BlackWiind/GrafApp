@@ -25,5 +25,34 @@ namespace GrafApp
         {
             g.DrawPolygon(pn, points);
         }
+
+        public static void KeyRight(Triangle var)
+        {
+            var.x += 30;
+            if (var.x > maxX)
+            { var.x = 0 + (var.x - maxX); }
+        }
+
+        public static void KeyLeft(Triangle var)
+        {
+            var.x -= 30;
+            if (var.x < 0)
+            { var.x = maxX + var.x; }
+        }
+
+        public static void KeyDown(Triangle var)
+        {
+            var.y += 30;
+            if (var.y > maxY)
+            { var.y = 0 + (var.y - maxY); }
+        }
+
+        public static void KeyUp(Triangle var)
+        {
+            var.y -= 30;
+            if (var.y < 0)
+            { var.y = maxY + var.y; }
+        }
     }
 }
+
