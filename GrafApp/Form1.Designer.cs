@@ -35,9 +35,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -131,6 +131,16 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(639, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 41);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Случайное движение";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -158,15 +168,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.40189F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(780, 558);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(639, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 41);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Случайное движение";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // Lab1
             // 

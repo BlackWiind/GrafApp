@@ -51,5 +51,10 @@ namespace GrafApp
             { var.y = maxY + var.y; }
         }
 
+        public static void Random(Circle var)
+        {
+            var.x = rnd.Next(maxX);
+            var.y = rnd.Next(maxY);
+        }
     }
 }

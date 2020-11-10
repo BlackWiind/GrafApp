@@ -76,5 +76,14 @@ namespace GrafApp
             if (var.y < 0)
             { var.y = maxY + var.y; }
         }
+
+        public static void Random(tPoint var)
+        {
+            var.x = rnd.Next(maxX);
+            var.y = rnd.Next(maxY);
+            var.width = 1;
+            var.hieght = 1;
+            var.pn = new Pen(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
+        }
     }
 }
