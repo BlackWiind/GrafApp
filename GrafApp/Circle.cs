@@ -50,5 +50,6 @@ namespace GrafApp
             if (var.y < 0)
             { var.y = maxY + var.y; }
         }
+
     }
 }

@@ -80,17 +80,86 @@ namespace GrafApp
 
             if (e.KeyValue == (char)Keys.Left)
             {
-                foreach (tPoint d in list) { tPoint.KeyLeft(d); Draw(); }
+                foreach (tPoint d in list)
+                {
+                    if (d is Ellipse)
+                    {
+                        Ellipse.KeyLeft(d);
+                    }
+                    else if (d is Circle)
+                    {
+                        Circle.KeyLeft(d);
+                    }
+                    else if (d is Triangle)
+                    {
+                        Triangle.KeyLeft(d);
+                    }
+                    else if (d is Rectangle)
+                    {
+                        Rectangle.KeyLeft(d);
+                    }
+                    else
+                    {
+                        Line.KeyLeft(d);
+                    }
+                    Draw();
+                }
             }
 
             if (e.KeyValue == (char)Keys.Up)
             {
-                foreach (tPoint d in list) { tPoint.KeyUp(d); Draw(); }
+                foreach (tPoint d in list)
+                {
+                    if (d is Ellipse)
+                    {
+                        Ellipse.KeyUp(d);
+                    }
+                    else if (d is Circle)
+                    {
+                        Circle.KeyUp(d);
+                    }
+                    else if (d is Triangle)
+                    {
+                        Triangle.KeyUp(d);
+                    }
+                    else if (d is Rectangle)
+                    {
+                        Rectangle.KeyUp(d);
+                    }
+                    else
+                    {
+                        Line.KeyUp(d);
+                    }
+                    Draw();
+                }
             }
 
             if (e.KeyValue == (char)Keys.Down)
             {
-                foreach (tPoint d in list) { tPoint.KeyDown(d); Draw(); }
+                foreach (tPoint d in list)
+                {
+                    if (d is Ellipse)
+                    {
+                        Ellipse.KeyDown(d);
+                    }
+                    else if (d is Circle)
+                    {
+                        Circle.KeyDown(d);
+                    }
+                    else if (d is Triangle)
+                    {
+                        Triangle.KeyDown(d);
+                    }
+                    else if (d is Rectangle)
+                    {
+                        Rectangle.KeyDown(d);
+                    }
+                    else
+                    {
+                        Line.KeyDown(d);
+                    }
+                    Draw();
+                }
             }
         }
 
