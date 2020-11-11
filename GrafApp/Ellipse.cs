@@ -45,6 +45,12 @@ namespace GrafApp
             if (var.y < 0)
             { var.y = maxY + var.y; }
         }
+
+        public static void Random(Ellipse var)
+        {
+            var.x = rnd.Next(maxX);
+            var.y = rnd.Next(maxY);
+        }
     }
 } 
 

@@ -30,7 +30,9 @@ namespace GrafApp
         {
             for (int i = 0; i < 3; i++)
             {
-                var.points[i].Offset(30, 0);
+                var.points[i].X += 30;
+               if (var.points[i].X > maxX)
+                { var.points[i].X = 0 + (var.points[i].X - maxX); }
             }      
         }
 
@@ -38,27 +40,33 @@ namespace GrafApp
         {
             for (int i = 0; i < 3; i++)
             {
-                var.x -= 30;
-                if (var.x < 0)
-                { var.x = maxX + var.x; }
+                var.points[i].X -= 30;
+                if (var.points[i].X < 0)
+                { var.points[i].X = maxX + var.points[i].X; }
             }          
         }
 
         public static void KeyDown(Triangle var)
         {
             {
-                var.y += 30;
-                if (var.y > maxY)
-                { var.y = 0 + (var.y - maxY); }
+                for (int i = 0; i < 3; i++)
+                {
+                    var.points[i].Y += 30;
+                    if (var.points[i].Y > maxY)
+                    { var.points[i].Y = 0 + (var.points[i].Y - maxY); }
+                }
             }
         }
 
         public static void KeyUp(Triangle var)
         {
             {
-                var.y -= 30;
-                if (var.y < 0)
-                { var.y = maxY + var.y; }
+                for (int i = 0; i < 3; i++)
+                {
+                    var.points[i].Y -= 30;
+                    if (var.points[i].Y < 0)
+                    { var.points[i].Y = maxY + var.points[i].Y; }
+                }
             }
         }
     }

@@ -64,5 +64,13 @@ namespace GrafApp
             if (var.y1 < 0)
             { var.y1 = maxY + var.y1; }
         }
+
+        public static void Random(Line var)
+        {
+            var.x = rnd.Next(maxX);
+            var.y = rnd.Next(maxY);
+            var.x1 = rnd.Next(maxX);
+            var.y1 = rnd.Next(maxY);
+        }
     }
 }

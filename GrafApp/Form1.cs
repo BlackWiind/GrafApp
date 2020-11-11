@@ -223,26 +223,26 @@ namespace GrafApp
         {
             foreach (tPoint d in list)
             {
-                /*if (d is Ellipse)
+                if (d is Ellipse)
                 {
-                    Ellipse.KeyRight(d as Ellipse);
+                    Ellipse.Random(d as Ellipse);
                 }
-                else*/ if (d is Circle)
+                else if (d is Circle)
                 {
                     Circle.Random(d as Circle);
                 }
-                /*else if (d is Triangle)
+                else if (d is Triangle)
                 {
-                    Triangle.KeyRight(d as Triangle);
+                    Triangle.Random(d as Triangle);
                 }
                 else if (d is Rectangle)
                 {
-                    Rectangle.KeyRight(d as Rectangle);
+                    Rectangle.Random(d as Rectangle);
                 }
                 else if (d is Line)
                 {
-                    Line.KeyRight(d as Line);
-                }*/
+                    Line.Random(d as Line);
+                }
                 else
                 {
                     tPoint.Random(d);
