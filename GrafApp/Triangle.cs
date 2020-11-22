@@ -15,9 +15,7 @@ namespace GrafApp
         {
 
             for(int i = 0; i < points.Length; i++) {
-                x = rnd.Next(maxX);
-                y = rnd.Next(maxY);
-                points[i] = new Point(x, y); 
+                points[i] = new Point(rnd.Next(maxX), rnd.Next(maxY)); 
             }
         }
 
@@ -28,32 +26,48 @@ namespace GrafApp
 
         public static void KeyRight(Triangle var)
         {
-            for (int i = 0; i < 3; i++)
             {
-                var.points[i].X += 30;
-               if (var.points[i].X > maxX)
-                { var.points[i].X = 0 + (var.points[i].X - maxX); }
-            }      
+                int tmp = 30;
+                for (int i = 0; i < 3; i++)
+                {
+                    if (var.points[i].X + tmp > maxX)
+                    { tmp = 30 - (var.points[i].X + tmp - maxX); }
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    var.points[i].X += tmp;
+                }
+            }
         }
 
         public static void KeyLeft(Triangle var)
         {
-            for (int i = 0; i < 3; i++)
             {
-                var.points[i].X -= 30;
-                if (var.points[i].X < 0)
-                { var.points[i].X = maxX + var.points[i].X; }
-            }          
+                int tmp = 30;
+                for (int i = 0; i < 3; i++)
+                {
+                    if (var.points[i].X - tmp < 0)
+                    { tmp = 30 + (var.points[i].X - tmp); }
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    var.points[i].X -= tmp;
+                }
+            }
         }
 
         public static void KeyDown(Triangle var)
         {
             {
+                int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    var.points[i].Y += 30;
-                    if (var.points[i].Y > maxY)
-                    { var.points[i].Y = 0 + (var.points[i].Y - maxY); }
+                    if (var.points[i].Y + tmp > maxY)
+                    { tmp = 30 - (var.points[i].Y + tmp - maxY); }
+                }
+                for (int i = 0; i < 3; i++)
+                {                    
+                    var.points[i].Y += tmp;
                 }
             }
         }
@@ -61,12 +75,27 @@ namespace GrafApp
         public static void KeyUp(Triangle var)
         {
             {
+                int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    var.points[i].Y -= 30;
-                    if (var.points[i].Y < 0)
-                    { var.points[i].Y = maxY + var.points[i].Y; }
+                    if (var.points[i].Y - tmp < 0)
+                    { tmp = 30 + (var.points[i].Y - tmp); }
                 }
+                for (int i = 0; i < 3; i++)
+                {
+                    var.points[i].Y -= tmp;
+                }
+            }
+        }
+        
+        public static void Random(Triangle var)
+        {
+            int tmpX = rnd.Next(maxX) - var.points[1].X;
+            int tmpY = rnd.Next(maxY) - var.points[1].Y;
+            for (int i = 0; i < 3; i++)
+            {
+                var.points[i].X += tmpX;
+                var.points[i].Y += tmpY;
             }
         }
     }

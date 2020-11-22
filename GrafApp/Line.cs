@@ -67,10 +67,12 @@ namespace GrafApp
 
         public static void Random(Line var)
         {
-            var.x = rnd.Next(maxX);
-            var.y = rnd.Next(maxY);
-            var.x1 = rnd.Next(maxX);
-            var.y1 = rnd.Next(maxY);
+            int tmpX = rnd.Next(maxX) - var.x;
+            int tmpY = rnd.Next(maxY) - var.y;
+            var.x += tmpX;
+            var.y += tmpY;
+            var.x1 += tmpX;
+            var.y1 += tmpY;
         }
     }
 }
