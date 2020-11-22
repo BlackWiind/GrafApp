@@ -55,61 +55,17 @@ namespace GrafApp
             if (e.KeyValue == (char)Keys.Right)
             {
                 foreach (tPoint d in list) 
-                { if (d is Ellipse) 
-                    { 
-                        Ellipse.KeyRight(d as Ellipse); 
-                    }
-                  else if (d is Circle)
-                    {
-                        Circle.KeyRight(d as Circle);
-                    }
-                  else if (d is Triangle)
-                    {
-                        Triangle.KeyRight(d as Triangle);
-                    }
-                  else if (d is Rectangle)
-                    {
-                        Rectangle.KeyRight(d as Rectangle);
-                    }
-                  else if (d is Line)
-                    {
-                        Line.KeyRight(d as Line);
-                    }
-                  else
-                    {
-                        tPoint.KeyRight(d);
-                    }  
-                  Draw(); }
+                { 
+                    d.KeyRight();                    
+                    Draw(); 
+                }
             }
 
             if (e.KeyValue == (char)Keys.Left)
             {
                 foreach (tPoint d in list)
                 {
-                    if (d is Ellipse)
-                    {
-                        Ellipse.KeyLeft(d as Ellipse);
-                    }
-                    else if (d is Circle)
-                    {
-                        Circle.KeyLeft(d as Circle);
-                    }
-                    else if (d is Triangle)
-                    {
-                        Triangle.KeyLeft(d as Triangle);
-                    }
-                    else if (d is Rectangle)
-                    {
-                        Rectangle.KeyLeft(d as Rectangle);
-                    }
-                    else if (d is Line)
-                    {
-                        Line.KeyLeft(d as Line);
-                    }
-                    else
-                    {
-                        tPoint.KeyLeft(d);
-                    }
+                    d.KeyLeft();
                     Draw();
                 }
             }
@@ -117,31 +73,8 @@ namespace GrafApp
             if (e.KeyValue == (char)Keys.Up)
             {
                 foreach (tPoint d in list)
-                {
-                    if (d is Ellipse)
-                    {
-                        Ellipse.KeyUp(d as Ellipse);
-                    }
-                    else if (d is Circle)
-                    {
-                        Circle.KeyUp(d as Circle);
-                    }
-                    else if (d is Triangle)
-                    {
-                        Triangle.KeyUp(d as Triangle);
-                    }
-                    else if (d is Rectangle)
-                    {
-                        Rectangle.KeyUp(d as Rectangle);
-                    }
-                    else if (d is Line)
-                    {
-                        Line.KeyUp(d as Line);
-                    }
-                    else
-                    {
-                        tPoint.KeyUp(d);
-                    }
+                {                   
+                    d.KeyUp();
                     Draw();
                 }
             }
@@ -149,31 +82,8 @@ namespace GrafApp
             if (e.KeyValue == (char)Keys.Down)
             {
                 foreach (tPoint d in list)
-                {
-                    if (d is Ellipse)
-                    {
-                        Ellipse.KeyDown(d as Ellipse);
-                    }
-                    else if (d is Circle)
-                    {
-                        Circle.KeyDown(d as Circle);
-                    }
-                    else if (d is Triangle)
-                    {
-                        Triangle.KeyDown(d as Triangle);
-                    }
-                    else if (d is Rectangle)
-                    {
-                        Rectangle.KeyDown(d as Rectangle);
-                    }
-                    else if (d is Line)
-                    {
-                        Line.KeyDown(d as Line);
-                    }
-                    else
-                    {
-                        tPoint.KeyDown(d);
-                    }
+                {                  
+                    d.KeyDown();
                     Draw();
                 }
             }
@@ -223,30 +133,7 @@ namespace GrafApp
         {
             foreach (tPoint d in list)
             {
-                if (d is Ellipse)
-                {
-                    Ellipse.Random(d as Ellipse);
-                }
-                else if (d is Circle)
-                {
-                    Circle.Random(d as Circle);
-                }
-                else if (d is Triangle)
-                {
-                    Triangle.Random(d as Triangle);
-                }
-                else if (d is Rectangle)
-                {
-                    Rectangle.Random(d as Rectangle);
-                }
-                else if (d is Line)
-                {
-                    Line.Random(d as Line);
-                }
-                else
-                {
-                    tPoint.Random(d);
-                }
+                d.Random();
                 Draw();
             }
             pictureBox1.Focus();

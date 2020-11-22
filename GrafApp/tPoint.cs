@@ -49,41 +49,41 @@ namespace GrafApp
             get { return pn; }
         }
 
-        public static void KeyRight(tPoint var)
+        public virtual void KeyRight()
         {
-            var.x += 30;
-            if (var.x > maxX)
-            { var.x = 0 + (var.x - maxX); }
+            x += 30;
+            if (x > maxX)
+            { x = 0 + (x - maxX); }
         }
 
-        public static void KeyLeft(tPoint var)
+        public virtual void KeyLeft()
         {
-            var.x -= 30;
-            if (var.x < 0)
-            {var. x = maxX + var.x; }
+            x -= 30;
+            if (x < 0)
+            {x = maxX + x; }
         }
 
-        public static void KeyDown(tPoint var)
+        public virtual void KeyDown()
         {
-            var.y += 30;
-            if (var.y > maxY)
-            { var.y = 0 + (var.y - maxY); }
+            y += 30;
+            if (y > maxY)
+            { y = 0 + (y - maxY); }
         }
 
-        public static void KeyUp(tPoint var)
+        public virtual void KeyUp()
         {
-            var.y -= 30;
-            if (var.y < 0)
-            { var.y = maxY + var.y; }
+            y -= 30;
+            if (y < 0)
+            { y = maxY + y; }
         }
 
-        public static void Random(tPoint var)
+        public virtual void Random()
         {
-            var.x = rnd.Next(maxX);
-            var.y = rnd.Next(maxY);
-            var.width = 1;
-            var.hieght = 1;
-            var.pn = new Pen(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
+            x = rnd.Next(maxX);
+            y = rnd.Next(maxY);
+            //width = 1;
+            //hieght = 1;
+            //pn = new Pen(Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255)));
         }
     }
 }

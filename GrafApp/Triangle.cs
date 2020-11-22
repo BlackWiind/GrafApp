@@ -24,78 +24,78 @@ namespace GrafApp
             g.DrawPolygon(pn, points);
         }
 
-        public static void KeyRight(Triangle var)
+        public override void KeyRight()
         {
             {
                 int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    if (var.points[i].X + tmp > maxX)
-                    { tmp = 30 - (var.points[i].X + tmp - maxX); }
+                    if (points[i].X + tmp > maxX)
+                    { tmp = 30 - (points[i].X + tmp - maxX); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    var.points[i].X += tmp;
+                    points[i].X += tmp;
                 }
             }
         }
 
-        public static void KeyLeft(Triangle var)
+        public override void KeyLeft()
         {
             {
                 int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    if (var.points[i].X - tmp < 0)
-                    { tmp = 30 + (var.points[i].X - tmp); }
+                    if (points[i].X - tmp < 0)
+                    { tmp = 30 + (points[i].X - tmp); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    var.points[i].X -= tmp;
+                    points[i].X -= tmp;
                 }
             }
         }
 
-        public static void KeyDown(Triangle var)
+        public override void KeyDown()
         {
             {
                 int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    if (var.points[i].Y + tmp > maxY)
-                    { tmp = 30 - (var.points[i].Y + tmp - maxY); }
+                    if (points[i].Y + tmp > maxY)
+                    { tmp = 30 - (points[i].Y + tmp - maxY); }
                 }
                 for (int i = 0; i < 3; i++)
                 {                    
-                    var.points[i].Y += tmp;
+                    points[i].Y += tmp;
                 }
             }
         }
 
-        public static void KeyUp(Triangle var)
+        public override void KeyUp()
         {
             {
                 int tmp = 30;
                 for (int i = 0; i < 3; i++)
                 {
-                    if (var.points[i].Y - tmp < 0)
-                    { tmp = 30 + (var.points[i].Y - tmp); }
+                    if (points[i].Y - tmp < 0)
+                    { tmp = 30 + (points[i].Y - tmp); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    var.points[i].Y -= tmp;
+                    points[i].Y -= tmp;
                 }
             }
         }
         
-        public static void Random(Triangle var)
+        public override void Random()
         {
-            int tmpX = rnd.Next(maxX) - var.points[1].X;
-            int tmpY = rnd.Next(maxY) - var.points[1].Y;
+            int tmpX = rnd.Next(maxX) - points[1].X;
+            int tmpY = rnd.Next(maxY) - points[1].Y;
             for (int i = 0; i < 3; i++)
             {
-                var.points[i].X += tmpX;
-                var.points[i].Y += tmpY;
+                points[i].X += tmpX;
+                points[i].Y += tmpY;
             }
         }
     }
