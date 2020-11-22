@@ -25,54 +25,54 @@ namespace GrafApp
             g.DrawLine(pn, x, y, x1, y1);
         }
 
-        public static void KeyRight(Line var)
+        public override void KeyRight()
         {
-            var.x += 30;
-            var.x1 += 30;
-            if (var.x > maxX)
-            { var.x = 0 + (var.x - maxX); }
-            if (var.x1 > maxX)
-            { var.x1 = 0 + (var.x1 - maxX); }
+            x += 30;
+            x1 += 30;
+            if (x > maxX)
+            { x = 0 + (x - maxX); }
+            if (x1 > maxX)
+            { x1 = 0 + (x1 - maxX); }
         }
 
-        public static void KeyLeft(Line var)
+        public override void KeyLeft()
         {
-            var.x -= 30;
-            var.x1 -= 30;
-            if (var.x < 0)
-            { var.x = maxX + var.x; }
-            if (var.x1 < 0)
-            { var.x1 = maxX + var.x1; }
+            x -= 30;
+            x1 -= 30;
+            if (x < 0)
+            { x = maxX + x; }
+            if (x1 < 0)
+            { x1 = maxX + x1; }
         }
 
-        public static void KeyDown(Line var)
+        public override void KeyDown()
         {
-            var.y += 30;
-            var.y1 += 30;
-            if (var.y > maxY)
-            { var.y = 0 + (var.y - maxY); }
-            if (var.y1 > maxY)
-            { var.y1 = 0 + (var.y1 - maxY); }
+            y += 30;
+            y1 += 30;
+            if (y > maxY)
+            { y = 0 + (y - maxY); }
+            if (y1 > maxY)
+            { y1 = 0 + (y1 - maxY); }
         }
 
-        public static void KeyUp(Line var)
+        public override void KeyUp()
         {
-            var.y -= 30;
-            var.y1 -= 30;
-            if (var.y < 0)
-            { var.y = maxY + var.y; }
-            if (var.y1 < 0)
-            { var.y1 = maxY + var.y1; }
+            y -= 30;
+            y1 -= 30;
+            if (y < 0)
+            { y = maxY + y; }
+            if (y1 < 0)
+            { y1 = maxY + y1; }
         }
 
-        public static void Random(Line var)
+        public override void Random()
         {
-            int tmpX = rnd.Next(maxX) - var.x;
-            int tmpY = rnd.Next(maxY) - var.y;
-            var.x += tmpX;
-            var.y += tmpY;
-            var.x1 += tmpX;
-            var.y1 += tmpY;
+            int tmpX = rnd.Next(maxX) - x;
+            int tmpY = rnd.Next(maxY) - y;
+            x += tmpX;
+            y += tmpY;
+            x1 += tmpX;
+            y1 += tmpY;
         }
     }
 }

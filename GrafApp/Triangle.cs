@@ -31,7 +31,7 @@ namespace GrafApp
                 for (int i = 0; i < 3; i++)
                 {
                     if (points[i].X + tmp > maxX)
-                    { tmp = 30 - (points[i].X + tmp - maxX); }
+                    { tmp = tmp - (points[i].X + tmp - maxX); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
@@ -47,7 +47,7 @@ namespace GrafApp
                 for (int i = 0; i < 3; i++)
                 {
                     if (points[i].X - tmp < 0)
-                    { tmp = 30 + (points[i].X - tmp); }
+                    { tmp = tmp + (points[i].X - tmp); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
@@ -63,7 +63,7 @@ namespace GrafApp
                 for (int i = 0; i < 3; i++)
                 {
                     if (points[i].Y + tmp > maxY)
-                    { tmp = 30 - (points[i].Y + tmp - maxY); }
+                    { tmp = tmp - (points[i].Y + tmp - maxY); }
                 }
                 for (int i = 0; i < 3; i++)
                 {                    
@@ -79,7 +79,7 @@ namespace GrafApp
                 for (int i = 0; i < 3; i++)
                 {
                     if (points[i].Y - tmp < 0)
-                    { tmp = 30 + (points[i].Y - tmp); }
+                    { tmp = tmp + (points[i].Y - tmp); }
                 }
                 for (int i = 0; i < 3; i++)
                 {
